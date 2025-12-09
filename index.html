@@ -1,15 +1,4 @@
 <!DOCTYPE html>
-
-<html>
-<head>
-  <meta http-equiv="refresh" content="0; url='https://mraselmahmud.github.io/M-Rasel-Mahumud/'" />
-  <title>Redirecting...</title>
-</head>
-<body>
-  <p>If you are not redirected, <a href="https://mraselmahmud.github.io/M-Rasel-Mahumud/">click here</a>.</p>
-</body>
-</html>
-
 <html lang="en">
 <head>
  <meta charset="UTF-8">
@@ -42,7 +31,32 @@ header {
 }
 header h1 { font-size: 24px; margin-bottom: 5px; }
 header a { color: #ecf0f1; text-decoration: none; font-weight: bold; }
+
 nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #27ae60;   /* keep consistent with your theme */
+  flex-wrap: nowrap;     /* force single row */
+  overflow-x: auto;      /* scroll if too many items */
+}
+
+nav a {
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;   /* prevents wrapping */
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d1f2eb;
+  text-decoration: underline;
+}
+
+/* nav {
   background: #27ae60;
   padding: 12px 40px;
   text-align: center;
@@ -55,7 +69,7 @@ nav a {
   font-size: 16px;
   transition: color 0.3s;
 }
-nav a:hover { color: #d1f2eb; text-decoration: underline; }
+nav a:hover { color: #d1f2eb; text-decoration: underline; } */
 main { padding: 40px; }
 .intro { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; background: #f9f9f9; padding: 40px; border-bottom: 1px solid #ddd; }
 .profile-container { text-align: center; }
@@ -87,6 +101,61 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
     margin-bottom: 10px;
 }
 
+/* Logo strip between intro & recent news */
+/* Full-width logo strip */
+.logo-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding:
+
+
+/* Logo sizes */
+.logo-strip img {
+  height: 110px;        /* bigger */
+  max-width: 280px;
+  object-fit: contain;
+}
+
+/* Exact alignment */
+.logo-left {
+  justify-self: start;
+}
+
+.logo-center {
+  justify-self: center;
+}
+
+.logo-right {
+  justify-self: end;
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .logo-strip {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 30px 20px;
+  }
+
+  .logo-left,
+  .logo-center,
+  .logo-right {
+    justify-self: center;
+  }
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .logo-strip {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+ 
 </style>
 </head>
 <body>
@@ -105,6 +174,7 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
   <a href="index.html">Home</a>
   <a href="research.html">Research</a>
   <a href="awards.html">Awards</a>
+  <a href="service.html">Service</a>
   <a href="publications.html">Publications</a>
   <a href="teaching.html">Teaching Experience</a>
   <a href="education.html">Education</a>
@@ -133,7 +203,16 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
     </div>
   </section>
 
+<!-- Logos between intro and recent news -->
+<div class="logo-strip">
+  <img src="logo1.jpg" alt="KSU Logo" class="logo-left">
+  <img src="logo2.jpg" alt="UTSA Logo" class="logo-center">
+  <img src="logo3.jpg" alt="NSF Logo" class="logo-right">
+</div>
+
+
   <section id="recent-news">
+   
   <h2>Recent News</h2>
   <ul>
     <li>
@@ -167,5 +246,5 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
     <li>Award received (January 2021): Ph.D. fellowship at The University of Texas at San Antonio.</li>
     <li>Ph.D. started (Fall 2020): Started Ph.D. in Computer Science at The University of Texas at San Antonio.</li>
   </ul>
-</section>
 
+</section>
