@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students - My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    #Lab h2 {
+      color: #27ae60;
+      border-bottom: 2px solid #27ae60;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .student-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      gap: 20px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .student-photo {
+      flex: 0 0 150px; /* fixed width for photo */
+    }
+
+    .student-photo img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .student-info {
+      flex: 2;  /* middle gets more space */
+    }
+
+    .student-info h3 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    .student-info p {
+      margin: 5px 0;
+      line-height: 1.6;
+    }
+
+    .student-video {
+      flex: 1; /* right column */
+      max-width: 250px;
+    }
+
+    .student-video iframe {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+  <a href="index.html">Home</a>
+  <a href="research.html">Research</a>
+  <a href="awards.html">Awards</a>
+  <a href="publications.html">Publications</a>
+  <a href="teaching.html">Teaching Experience</a>
+  <a href="education.html">Education</a>
+  <a href="initiative.html">Initiative Talks</a>
+  <a href="industry.html">Industry Experience</a>
+  <a href="lab.html">Lab</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+  <section id="lab">
+    <div class="student-card">
+      <div class="student-photo">
+        <img src="profile.jpg" alt="Md Irfan Pavel">
+      </div>
+      <div class="student-info">
+        <h3>M. Rasel Mahmud</h3>
+        <p>Director</p>
+      </div>
+    </div>
+
+    <!-- Student Example with 3 Columns -->
+    <div class="student-card">
+      <div class="student-photo">
+        <img src="irfan.jpg" alt="Md Irfan Pavel">
+      </div>
+      <div class="student-info">
+        <h3>Md Irfan Pavel, ph.D.</h3>
+        <p>My research is focused on improving VR/AR user experience using Machine Learning and Deep Learning algorithms in immersive environments. I aim to enhance immersive experiences, revolutionize user interactions, and drive innovation across XR using AI.</p>
+      </div>
+      <div class="student-video">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Another Student -->
+    <div class="student-card">
+      <div class="student-photo">
+        <img src="alamin.jpg" alt="Md Alamin Hossain">
+      </div>
+      <div class="student-info">
+        <h3>Md Alamin Hossain ph.D.</h3>
+        <p>Exploring intelligent XR systems for healthcare and well-being. Focused on applying AI/ML models to enhance XR devices for medical imaging, rehabilitation, healthcare education, and clinical research.</p>
+      </div>
+      <div class="student-video">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- Student 4 -->
+<div class="student-card">
+  <div class="student-photo">
+    <img src="hossain.jpg" alt="Md Monowar Hossain">
+  </div>
+  <div class="student-info">
+    <h3>Md Monowar Hossain, ph.D.</h3>
+    <p>Focusing on cognitive load and fatigue level in immersive environments. Aiming to mitigate cognitive load and fatigue due to multisensory feedback in immersive environments.</p>
+  </div>
+  <div class="student-video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_4" title="Md Monowar Hossain video" loading="lazy" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- Student 5 -->
+<div class="student-card">
+  <div class="student-photo">
+    <img src="nafisa.jpg" alt="Nafisa Anjum">
+  </div>
+  <div class="student-info">
+    <h3>Nafisa Anjum M.S</h3>
+    <p>I am a security researcher and Graduate Research Assistant at the Extended Reality and Intelligence Lab, Kennesaw State University. My work focuses on security and privacy of immersive systems, especially XR in healthcare, developing frameworks to uncover and mitigate emerging threats.</p>
+  </div>
+  <div class="student-video">
+    <iframe src="https://www.youtube.com/embed/VIDEO_ID_5" title="Nafisa Anjum video" loading="lazy" allowfullscreen></iframe>
+  </div>
+</div>
+  </section>
+</body>
+</html>
+

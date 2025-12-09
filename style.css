@@ -1,0 +1,172 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Body */
+body {
+    background: #fdfdfd;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2c3e50;
+    color: white;
+    padding: 20px 40px;
+    border-bottom: 4px solid #27ae60;
+}
+header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+header span {
+    font-size: 14px;
+    color: #ecf0f1;
+}
+header a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+header a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    background: #27ae60;
+    padding: 12px 40px;
+    text-align: center; /* center nav links */
+}
+nav a {
+    margin: 0 20px; /* space between links */
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #d1f2eb; /* light hover color */
+    text-decoration: underline;
+}
+
+/* Intro (Home Section) */
+.intro {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 40px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid #27ae60;
+    object-fit: cover;
+}
+.intro-text {
+    max-width: 800px;
+    font-size: 16px;
+    text-align: justify;
+}
+
+/* Sections */
+main {
+    padding: 40px;
+}
+section {
+    margin-bottom: 60px;
+}
+section h2 {
+    margin-bottom: 15px;
+    color: #27ae60;
+    font-size: 22px;
+    border-bottom: 2px solid #27ae60;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+ul {
+    margin-left: 20px;
+    list-style-type: square;
+}
+
+/* Two Column Layout */
+.two-column {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 1;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Social icons below profile picture */
+.social-below-pic {
+    margin-top: 15px;
+    text-align: center;
+}
+.social-below-pic a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #27ae60;
+    transition: color 0.3s ease;
+}
+.social-below-pic a:hover {
+    color: #219150;
+}
+.research-header {
+  display: flex;
+  justify-content: space-between; /* Pushes the two items to opposite ends */
+  align-items: flex-start;        /* Aligns vertically at the top */
+  gap: 20px;                      /* Optional: adds extra space between items if they wrap */
+  flex-wrap: wrap;                /* Allows wrapping on smaller screens */
+  font-weight: bold;
+  font-size: 16px;
+}
+.institution {
+  flex: 1; /* Take available space */
+}
+.date {
+  white-space: nowrap; /* Prevents date from breaking to next line */
+}
+
+#awards h2,
+#initiative h2 {
+  color: #27ae60;
+  border-bottom: 2px solid #27ae60;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+#awards h2 a,
+#initiative h2 a {
+    color: #27ae60;   /* force green */
+    text-decoration: none;
+}
+
+#teaching > p + .teaching-item {
+    margin-top: 30px; /* adjust the gap as needed */
+}
