@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mraselmahmud.github.io/M-Rasel-Mahumud/sitemap.xml
