@@ -199,6 +199,55 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
   line-height: 1.75;
 }
 
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;          /* ✅ STOP wrapping on desktop */
+  background: #f9f9f9;
+  padding: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.profile-container {
+  width: 260px;               /* ✅ fixed left column */
+  flex-shrink: 0;             /* ✅ never shrink */
+  text-align: center;
+}
+
+.intro-text {
+  flex: 1;
+  min-width: 0;               /* ✅ prevents overflow issues */
+  font-size: 16px;
+  text-align: justify;
+  line-height: 1.75;
+}
+
+/* ✅ Mobile: allow stacking */
+@media (max-width: 768px) {
+  .intro {
+    flex-wrap: wrap;
+  }
+  .profile-container {
+    width: 100%;
+  }
+}
+ 
+.logo-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+ .profile-contact{
+  text-align: left;
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+ 
 </style>
 </head>
 <body>
