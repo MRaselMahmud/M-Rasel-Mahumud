@@ -185,6 +185,44 @@ ol.poster-list li::before {
   color: #27ae60;
 }
 
+/* ================= Work Sheets → W2, W1 ================= */
+ol.work-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: work 3;   /* total items + 1 (2 items → 3) */
+}
+
+ol.work-list li {
+  counter-increment: work -1;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ol.work-list li::before {
+  content: "W" counter(work) ". ";
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* ================= Posters → P2, P1 ================= */
+ol.poster-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: poster 3; /* total items + 1 (2 items → 3) */
+}
+
+ol.poster-list li {
+  counter-increment: poster -1;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ol.poster-list li::before {
+  content: "P" counter(poster) ". ";
+  font-weight: bold;
+  color: #27ae60;
+}
+
 </style>
 
 
