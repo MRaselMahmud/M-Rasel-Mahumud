@@ -89,150 +89,177 @@ section h2 { margin-bottom: 15px; color: #27ae60; font-size: 22px; border-bottom
 ul { margin-left: 20px; list-style-type: square; }
 footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0; margin-top: 40px; font-size: 14px; }
 
-#recent-news h2 {
-    color: #27ae60;
-    border-bottom: 2px solid #27ae60;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
+/* ================== GLOBAL ================== */
+html {
+  scroll-behavior: smooth;
 }
 
-#recent-news ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    font-size: 15px;
-    line-height: 1.6;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fdfdfd;
+  color: #333;
+  line-height: 1.6;
 }
 
-#recent-news ul li {
-    margin-bottom: 10px;
-}
-
-/* Logo strip between intro & recent news */
-/* Full-width logo strip */
-.logo-strip {
-  width: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
+/* ================== HEADER ================== */
+header {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding:
-
-
-/* Logo sizes */
-.logo-strip img {
-  height: 90px;        /* bigger */
-  max-width: 250px;
-  object-fit: contain;
+  background: #2c3e50;
+  color: white;
+  padding: 12px 20px;
+  border-bottom: 4px solid #27ae60;
 }
 
-/* Exact alignment */
-.logo-left {
-  justify-self: start;
+header h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-.logo-center {
-  justify-self: center;
+header .subtitle {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-.logo-right {
-  justify-self: end;
+header a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Mobile handling */
-@media (max-width: 768px) {
-  .logo-strip {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    padding: 30px 20px;
-  }
-
-  .logo-left,
-  .logo-center,
-  .logo-right {
-    justify-self: center;
-  }
+/* ================== NAV ================== */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #27ae60;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .logo-strip {
-    flex-direction: column;
-    gap: 50px;
-  }
+nav a {
+  padding: 12px 18px;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  white-space: nowrap;
 }
 
-#contact h2 {
+nav a:hover {
+  color: #d1f2eb;
+  text-decoration: underline;
+}
+
+/* ================== MAIN ================== */
+main {
+  padding: 40px;
+}
+
+/* ================== INTRO SECTION ================== */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: nowrap;              /* 🔒 NO WRAP ON DESKTOP */
+  background: #f9f9f9;
+  padding: 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* LEFT COLUMN */
+.profile-container {
+  width: 280px;
+  flex: 0 0 280px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid #27ae60;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+/* Social icons */
+.social-below-pic a {
+  margin: 0 8px;
+  font-size: 24px;
+  color: #27ae60;
+}
+
+.social-below-pic a:hover {
+  color: #219150;
+}
+
+/* Contact under icons */
+.profile-contact {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.profile-contact h2 {
+  font-size: 20px;
+  color: #27ae60;
+  border-bottom: 2px solid #27ae60;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.profile-contact a {
+  color: #27ae60;
+  text-decoration: none;
+}
+
+.profile-contact a:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT COLUMN */
+.intro-text {
+  flex: 1;
+  min-width: 0;
+  max-width: none;
+  font-size: 16px;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+/* ================== SECTIONS ================== */
+section {
+  margin-bottom: 60px;
+}
+
+section h2 {
   color: #27ae60;
   border-bottom: 2px solid #27ae60;
   display: inline-block;
   padding-bottom: 5px;
   margin-bottom: 20px;
 }
-.contact-info p {
+
+/* ================== RECENT NEWS ================== */
+#recent-news ul {
+  list-style-type: disc;
+  margin-left: 20px;
   font-size: 15px;
   line-height: 1.6;
-  margin: 5px 0;
-}
-.contact-info a {
-  color: #27ae60;
-  text-decoration: none;
-}
-.contact-info a:hover {
-  text-decoration: underline;
-  color: #219150;
-}
-.profile-container{
-  flex: 0 0 240px;   /* fixed left column width */
 }
 
-.intro-text{
-  flex: 1;           /* takes remaining space */
-  min-width: 320px;  /* prevents ugly wrapping */
+#recent-news li {
+  margin-bottom: 10px;
 }
 
- .intro {
-  gap: 40px;
-}
-
-.intro-text {
-  line-height: 1.75;
-}
-
-.intro {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: nowrap;          /* ✅ STOP wrapping on desktop */
-  background: #f9f9f9;
-  padding: 40px;
-  border-bottom: 1px solid #ddd;
-}
-
-.profile-container {
-  width: 260px;               /* ✅ fixed left column */
-  flex-shrink: 0;             /* ✅ never shrink */
-  text-align: center;
-}
-
-.intro-text {
-  flex: 1;
-  min-width: 0;               /* ✅ prevents overflow issues */
-  font-size: 16px;
-  text-align: justify;
-  line-height: 1.75;
-}
-
-/* ✅ Mobile: allow stacking */
-@media (max-width: 768px) {
-  .intro {
-    flex-wrap: wrap;
-  }
-  .profile-container {
-    width: 100%;
-  }
-}
- 
+/* ================== LOGO STRIP ================== */
 .logo-strip {
   width: 100%;
   display: grid;
@@ -241,11 +268,46 @@ footer { background: #2c3e50; color: white; text-align: center; padding: 20px 0;
   padding: 30px 20px;
 }
 
- .profile-contact{
-  text-align: left;
-  margin-top: 25px;
+.logo-strip img {
+  height: 90px;
+  max-width: 250px;
+  object-fit: contain;
+}
+
+.logo-left { justify-self: start; }
+.logo-center { justify-self: center; }
+.logo-right { justify-self: end; }
+
+/* ================== FOOTER ================== */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
   font-size: 14px;
-  line-height: 1.6;
+}
+
+/* ================== MOBILE ================== */
+@media (max-width: 768px) {
+  .intro {
+    flex-wrap: wrap;           /* stack on mobile */
+  }
+
+  .profile-container {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .logo-strip {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .logo-left,
+  .logo-center,
+  .logo-right {
+    justify-self: center;
+  }
 }
  
 </style>
