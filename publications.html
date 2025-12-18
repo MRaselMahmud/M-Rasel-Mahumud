@@ -54,7 +54,7 @@
   <!-- Submission/In Preparation -->
   <div class="pub-category">
     <h3>Work Sheets</h3>
-    <ol>
+  <ol class="work-list">
       <li>M. Rasel Mahmud, Michael Stewart, Alberto Cordova, and John Quarles. "Vibrotactile Feedback to Make Real Walking in Virtual Reality More Accessible for People With and Without Mobility Impairments.” IEEE TVCG, 2023 (Submitted - 2nd round review).</li>
       <li>M. Rasel Mahmud, Alberto Cordova, and John Quarles. "Multimodal Feedback Techniques to Increase Accessibility of Immersive Virtual Reality.” IEEE TVCG, 2023 (In preparation).</li>
     </ol>
@@ -63,7 +63,7 @@
   <!-- Posters -->
   <div class="pub-category">
     <h3>Poster</h3>
-    <ol>
+  <ol class="poster-list">
       <li>M. Rasel Mahmud, Michael Stewart, Alberto Cordova, and John Quarles. "Auditory Feedback to Make Walking in Virtual Reality More Accessible." University of Texas at San Antonio, April 2022.</li>
       <li>M. Rasel Mahmud, Ahyoung Lee. “Network Flow Management Mechanisms Using Software-Defined Networks.” University of South Dakota, April 2019.</li>
     </ol>
@@ -143,6 +143,44 @@ ol.conf-list li {
 
 ol.conf-list li::before {
   content: "C" counter(conf) ". ";
+  font-weight: bold;
+  color: #27ae60;
+}
+
+  /* ================= Work Sheets → W1, W2 ================= */
+ol.work-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: work;
+}
+
+ol.work-list li {
+  counter-increment: work;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ol.work-list li::before {
+  content: "W" counter(work) ". ";
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* ================= Posters → P1, P2 ================= */
+ol.poster-list {
+  list-style: none;
+  padding-left: 0;
+  counter-reset: poster;
+}
+
+ol.poster-list li {
+  counter-increment: poster;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+ol.poster-list li::before {
+  content: "P" counter(poster) ". ";
   font-weight: bold;
   color: #27ae60;
 }
